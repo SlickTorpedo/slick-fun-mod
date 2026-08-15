@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:stone"
+                      },
+                "A":  {
+                          "item":  "minecraft:amethyst_shard"
+                      }
+            },
+    "pattern":  [
+                    "SSS",
+                    "SAS",
+                    "SSS"
+                ],
+    "result":  {
+                   "id":  "slickfun:heavy_stone",
+                   "count":  1
+               }
+}

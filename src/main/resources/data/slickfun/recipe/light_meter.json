@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "G":  {
+                          "item":  "minecraft:glowstone_dust"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_nugget"
+                      },
+                "T":  {
+                          "item":  "minecraft:torch"
+                      }
+            },
+    "pattern":  [
+                    " I ",
+                    "IGI",
+                    " T "
+                ],
+    "result":  {
+                   "id":  "slickfun:light_meter",
+                   "count":  1
+               }
+}

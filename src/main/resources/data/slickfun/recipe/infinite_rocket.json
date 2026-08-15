@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "F":  {
+                          "item":  "minecraft:firework_rocket"
+                      },
+                "E":  {
+                          "item":  "minecraft:ender_eye"
+                      },
+                "P":  {
+                          "item":  "minecraft:paper"
+                      }
+            },
+    "pattern":  [
+                    "PFP",
+                    "FEF",
+                    "PFP"
+                ],
+    "result":  {
+                   "id":  "slickfun:infinite_rocket",
+                   "count":  1
+               }
+}

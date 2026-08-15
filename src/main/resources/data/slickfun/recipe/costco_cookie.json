@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "food",
+    "group":  "slickfun_costco",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:sugar"
+                      },
+                "C":  {
+                          "item":  "minecraft:cocoa_beans"
+                      },
+                "W":  {
+                          "item":  "minecraft:wheat"
+                      }
+            },
+    "pattern":  [
+                    "SCS",
+                    "WWW"
+                ],
+    "result":  {
+                   "id":  "slickfun:costco_cookie",
+                   "count":  2
+               }
+}

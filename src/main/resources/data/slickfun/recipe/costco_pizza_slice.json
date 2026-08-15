@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "food",
+    "group":  "slickfun_costco",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:bread"
+                        },
+                        {
+                            "item":  "minecraft:milk_bucket"
+                        },
+                        {
+                            "item":  "minecraft:cooked_porkchop"
+                        }
+                    ],
+    "result":  {
+                   "id":  "slickfun:costco_pizza_slice",
+                   "count":  4
+               }
+}

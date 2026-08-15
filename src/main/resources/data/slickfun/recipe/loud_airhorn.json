@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "equipment",
+    "group":  "slickfun_airhorn",
+    "ingredients":  [
+                        {
+                            "item":  "slickfun:airhorn"
+                        },
+                        {
+                            "item":  "slickfun:airhorn"
+                        },
+                        {
+                            "item":  "slickfun:airhorn"
+                        }
+                    ],
+    "result":  {
+                   "id":  "slickfun:loud_airhorn",
+                   "count":  1
+               }
+}

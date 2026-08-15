@@ -1,0 +1,25 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "group":  "slickfun_portable",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "N":  {
+                          "item":  "minecraft:note_block"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone"
+                      }
+            },
+    "pattern":  [
+                    "III",
+                    "NRN",
+                    "III"
+                ],
+    "result":  {
+                   "id":  "slickfun:boombox",
+                   "count":  1
+               }
+}

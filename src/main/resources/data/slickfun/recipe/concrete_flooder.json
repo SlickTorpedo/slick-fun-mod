@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "G":  {
+                          "item":  "minecraft:gravel"
+                      },
+                "S":  {
+                          "item":  "minecraft:sand"
+                      },
+                "W":  {
+                          "item":  "minecraft:water_bucket"
+                      }
+            },
+    "pattern":  [
+                    " G ",
+                    "SWS",
+                    " G "
+                ],
+    "result":  {
+                   "id":  "slickfun:concrete_flooder",
+                   "count":  1
+               }
+}

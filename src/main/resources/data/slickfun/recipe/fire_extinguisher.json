@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "R":  {
+                          "item":  "minecraft:red_dye"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "B":  {
+                          "item":  "minecraft:water_bucket"
+                      }
+            },
+    "pattern":  [
+                    " I ",
+                    "RBR",
+                    "RRR"
+                ],
+    "result":  {
+                   "id":  "slickfun:fire_extinguisher",
+                   "count":  1
+               }
+}

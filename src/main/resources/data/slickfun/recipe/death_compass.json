@@ -1,0 +1,25 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "group":  "slickfun_portable",
+    "key":  {
+                "C":  {
+                          "item":  "minecraft:compass"
+                      },
+                "B":  {
+                          "item":  "minecraft:bone"
+                      },
+                "S":  {
+                          "item":  "minecraft:soul_sand"
+                      }
+            },
+    "pattern":  [
+                    " B ",
+                    "BCB",
+                    " S "
+                ],
+    "result":  {
+                   "id":  "slickfun:death_compass",
+                   "count":  1
+               }
+}

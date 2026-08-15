@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "R":  {
+                          "item":  "minecraft:redstone"
+                      },
+                "P":  {
+                          "item":  "slickfun:rpg"
+                      }
+            },
+    "pattern":  [
+                    "RRR",
+                    "RPR",
+                    "RRR"
+                ],
+    "result":  {
+                   "id":  "slickfun:redstone_rpg",
+                   "count":  1
+               }
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:stick"
+                      },
+                "W":  {
+                          "tag":  "minecraft:wool"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_nugget"
+                      }
+            },
+    "pattern":  [
+                    "WWW",
+                    " I ",
+                    " S "
+                ],
+    "result":  {
+                   "id":  "slickfun:paint_roller",
+                   "count":  1
+               }
+}

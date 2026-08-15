@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "B":  {
+                          "item":  "minecraft:stone_button"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "pattern":  [
+                    " B ",
+                    "IRI",
+                    "III"
+                ],
+    "result":  {
+                   "id":  "slickfun:panic_button",
+                   "count":  1
+               }
+}

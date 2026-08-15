@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "Q":  {
+                          "item":  "minecraft:quartz"
+                      },
+                "E":  {
+                          "item":  "minecraft:emerald"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone"
+                      },
+                "S":  {
+                          "item":  "minecraft:stick"
+                      }
+            },
+    "pattern":  [
+                    "QQI",
+                    "ERI",
+                    "S  "
+                ],
+    "result":  {
+                   "id":  "slickfun:laser_rifle",
+                   "count":  1
+               }
+}

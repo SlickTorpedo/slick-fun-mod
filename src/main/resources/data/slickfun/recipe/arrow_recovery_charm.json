@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  {
+                          "item":  "minecraft:arrow"
+                      },
+                "G":  {
+                          "item":  "minecraft:gold_ingot"
+                      },
+                "E":  {
+                          "item":  "minecraft:ender_pearl"
+                      }
+            },
+    "pattern":  [
+                    " A ",
+                    "GEG",
+                    " A "
+                ],
+    "result":  {
+                   "id":  "slickfun:arrow_recovery_charm",
+                   "count":  1
+               }
+}

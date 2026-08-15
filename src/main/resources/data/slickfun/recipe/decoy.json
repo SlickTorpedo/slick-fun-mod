@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  {
+                          "item":  "minecraft:armor_stand"
+                      },
+                "P":  {
+                          "item":  "minecraft:pumpkin"
+                      },
+                "W":  {
+                          "item":  "minecraft:white_wool"
+                      }
+            },
+    "pattern":  [
+                    " P ",
+                    "WAW",
+                    " W "
+                ],
+    "result":  {
+                   "id":  "slickfun:decoy",
+                   "count":  2
+               }
+}

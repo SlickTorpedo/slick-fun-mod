@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "W":  {
+                          "item":  "minecraft:white_wool"
+                      },
+                "N":  {
+                          "item":  "minecraft:note_block"
+                      }
+            },
+    "pattern":  [
+                    "WWW",
+                    "WNW",
+                    "WWW"
+                ],
+    "result":  {
+                   "id":  "slickfun:screaming_sheep",
+                   "count":  2
+               }
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "food",
+    "key":  {
+                "P":  {
+                          "item":  "minecraft:paper"
+                      },
+                "D":  {
+                          "item":  "minecraft:dried_kelp"
+                      },
+                "R":  {
+                          "item":  "minecraft:rotten_flesh"
+                      }
+            },
+    "pattern":  [
+                    "PPP",
+                    "DRD",
+                    "PPP"
+                ],
+    "result":  {
+                   "id":  "slickfun:emergency_rations",
+                   "count":  4
+               }
+}

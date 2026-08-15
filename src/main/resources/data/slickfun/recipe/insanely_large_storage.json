@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "C":  {
+                          "item":  "minecraft:chest"
+                      },
+                "E":  {
+                          "item":  "minecraft:ender_eye"
+                      }
+            },
+    "pattern":  [
+                    "ICI",
+                    "CEC",
+                    "ICI"
+                ],
+    "result":  {
+                   "id":  "slickfun:insanely_large_storage",
+                   "count":  1
+               }
+}

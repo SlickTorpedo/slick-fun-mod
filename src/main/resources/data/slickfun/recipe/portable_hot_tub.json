@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"group": "slickfun_respawn",
+	"key": {
+		"B": {
+			"item": "minecraft:blaze_powder"
+		},
+		"W": {
+			"item": "minecraft:water_bucket"
+		},
+		"C": {
+			"item": "minecraft:cauldron"
+		},
+		"M": {
+			"item": "minecraft:magma_block"
+		}
+	},
+	"pattern": [
+		" B ",
+		"WCW",
+		"MMM"
+	],
+	"result": {
+		"id": "slickfun:portable_hot_tub",
+		"count": 1
+	}
+}

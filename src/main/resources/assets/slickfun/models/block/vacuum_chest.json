@@ -1,0 +1,8 @@
+{
+    "parent":  "minecraft:block/cube_bottom_top",
+    "textures":  {
+                     "top":  "slickfun:block/vacuum_chest_top",
+                     "bottom":  "slickfun:block/vacuum_chest_top",
+                     "side":  "slickfun:block/vacuum_chest_side"
+                 }
+}

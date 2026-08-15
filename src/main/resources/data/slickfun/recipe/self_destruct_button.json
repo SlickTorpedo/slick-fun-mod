@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "R":  {
+                          "item":  "minecraft:red_dye"
+                      },
+                "S":  {
+                          "item":  "minecraft:stone_button"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "T":  {
+                          "item":  "minecraft:redstone_torch"
+                      }
+            },
+    "pattern":  [
+                    "RSR",
+                    "ITI",
+                    "III"
+                ],
+    "result":  {
+                   "id":  "slickfun:self_destruct_button",
+                   "count":  1
+               }
+}

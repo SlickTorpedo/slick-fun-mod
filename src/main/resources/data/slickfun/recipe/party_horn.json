@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "G":  {
+                          "item":  "minecraft:goat_horn"
+                      },
+                "D":  {
+                          "tag":  "minecraft:banners"
+                      },
+                "N":  {
+                          "item":  "minecraft:note_block"
+                      }
+            },
+    "pattern":  [
+                    " D ",
+                    "DGD",
+                    " N "
+                ],
+    "result":  {
+                   "id":  "slickfun:party_horn",
+                   "count":  1
+               }
+}

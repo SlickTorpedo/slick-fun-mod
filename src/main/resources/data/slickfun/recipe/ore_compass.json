@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "C":  {
+                          "item":  "minecraft:compass"
+                      },
+                "L":  {
+                          "item":  "minecraft:lapis_lazuli"
+                      },
+                "D":  {
+                          "item":  "minecraft:diamond"
+                      }
+            },
+    "pattern":  [
+                    " L ",
+                    "LCL",
+                    " D "
+                ],
+    "result":  {
+                   "id":  "slickfun:ore_compass",
+                   "count":  1
+               }
+}

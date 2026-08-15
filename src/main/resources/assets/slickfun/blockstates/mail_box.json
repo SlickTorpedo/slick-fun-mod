@@ -1,0 +1,19 @@
+{
+    "variants":  {
+                     "facing=north":  {
+                                          "model":  "slickfun:block/mail_box"
+                                      },
+                     "facing=east":  {
+                                         "model":  "slickfun:block/mail_box",
+                                         "y":  90
+                                     },
+                     "facing=south":  {
+                                          "model":  "slickfun:block/mail_box",
+                                          "y":  180
+                                      },
+                     "facing=west":  {
+                                         "model":  "slickfun:block/mail_box",
+                                         "y":  270
+                                     }
+                 }
+}

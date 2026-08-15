@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"group": "slickfun_respawn",
+	"ingredients": [
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:poisonous_potato"
+		}
+	],
+	"result": {
+		"id": "slickfun:cyanide_pill",
+		"count": 4
+	}
+}

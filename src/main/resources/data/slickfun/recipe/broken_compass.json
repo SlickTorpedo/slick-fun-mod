@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "C":  {
+                          "item":  "minecraft:compass"
+                      },
+                "G":  {
+                          "item":  "minecraft:gravel"
+                      }
+            },
+    "pattern":  [
+                    " G ",
+                    "GCG",
+                    " G "
+                ],
+    "result":  {
+                   "id":  "slickfun:broken_compass",
+                   "count":  1
+               }
+}

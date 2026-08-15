@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "D":  {
+                          "item":  "minecraft:oak_door"
+                      },
+                "G":  {
+                          "item":  "minecraft:lime_dye"
+                      }
+            },
+    "pattern":  [
+                    " G ",
+                    " D ",
+                    " G "
+                ],
+    "result":  {
+                   "id":  "slickfun:emergency_exit",
+                   "count":  1
+               }
+}

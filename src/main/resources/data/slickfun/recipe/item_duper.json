@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"R": {
+			"item": "minecraft:redstone_block"
+		},
+		"O": {
+			"item": "minecraft:observer"
+		}
+	},
+	"pattern": [
+		"III",
+		"ROR",
+		"III"
+	],
+	"result": {
+		"id": "slickfun:item_duper",
+		"count": 1
+	}
+}

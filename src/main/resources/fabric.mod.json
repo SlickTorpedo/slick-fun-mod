@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "slickfun",
+	"version": "${version}",
+	"name": "Slick Fun Mod",
+	"description": "Respawn shortcuts, operator toys and a shulker-box-trading villager. Works client side, server side, or both.",
+	"authors": [
+		"Philip"
+	],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/slickfun/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.slickfun.SlickFunMod"
+		],
+		"client": [
+			"com.slickfun.client.SlickFunModClient"
+		],
+		"preLaunch": [
+			"com.slickfun.update.UpdateApplier"
+		]
+	},
+	"contributors": [
+		"SlickTorpedo"
+	],
+	"mixins": [
+		"slickfun.mixins.json"
+	],
+	"suggests": {
+		"trinkets": "*"
+	},
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

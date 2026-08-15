@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "L":  {
+                          "item":  "minecraft:leather"
+                      },
+                "E":  {
+                          "item":  "minecraft:ender_pearl"
+                      },
+                "G":  {
+                          "item":  "minecraft:gold_ingot"
+                      }
+            },
+    "pattern":  [
+                    "GLG",
+                    "LEL",
+                    "LLL"
+                ],
+    "result":  {
+                   "id":  "slickfun:bag_of_holding",
+                   "count":  1
+               }
+}

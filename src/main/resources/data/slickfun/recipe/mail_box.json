@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "building",
+    "key":  {
+                "P":  {
+                          "item":  "minecraft:oak_planks"
+                      },
+                "C":  {
+                          "item":  "minecraft:chest"
+                      },
+                "R":  {
+                          "item":  "minecraft:red_dye"
+                      }
+            },
+    "pattern":  [
+                    " R ",
+                    "PCP",
+                    "PPP"
+                ],
+    "result":  {
+                   "id":  "slickfun:mail_box",
+                   "count":  1
+               }
+}

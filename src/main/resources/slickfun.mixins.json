@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "com.slickfun.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"CatFleeMixin",
+		"CatTameMixin",
+		"CreeperExplosionMixin",
+		"CreeperFearMixin",
+		"HandSwingMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

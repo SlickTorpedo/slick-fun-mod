@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:stick"
+                      },
+                "A":  {
+                          "item":  "minecraft:amethyst_shard"
+                      },
+                "P":  {
+                          "item":  "minecraft:ender_pearl"
+                      }
+            },
+    "pattern":  [
+                    "  A",
+                    " S ",
+                    "P  "
+                ],
+    "result":  {
+                   "id":  "slickfun:exchange_wand",
+                   "count":  1
+               }
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:stick"
+                      },
+                "E":  {
+                          "item":  "minecraft:ender_pearl"
+                      },
+                "Q":  {
+                          "item":  "minecraft:quartz"
+                      }
+            },
+    "pattern":  [
+                    " Q ",
+                    " E ",
+                    " S "
+                ],
+    "result":  {
+                   "id":  "slickfun:chunk_border_stick",
+                   "count":  1
+               }
+}

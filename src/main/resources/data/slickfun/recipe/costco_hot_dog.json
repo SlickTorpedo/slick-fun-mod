@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "food",
+    "group":  "slickfun_costco",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:bread"
+                        },
+                        {
+                            "item":  "minecraft:cooked_porkchop"
+                        }
+                    ],
+    "result":  {
+                   "id":  "slickfun:costco_hot_dog",
+                   "count":  2
+               }
+}

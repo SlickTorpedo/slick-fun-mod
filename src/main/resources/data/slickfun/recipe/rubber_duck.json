@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:slime_ball"
+                      },
+                "Y":  {
+                          "item":  "minecraft:yellow_dye"
+                      }
+            },
+    "pattern":  [
+                    " Y ",
+                    "YSY",
+                    " Y "
+                ],
+    "result":  {
+                   "id":  "slickfun:rubber_duck",
+                   "count":  4
+               }
+}

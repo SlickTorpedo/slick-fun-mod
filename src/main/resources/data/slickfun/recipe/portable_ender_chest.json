@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "group":  "slickfun_portable",
+    "key":  {
+                "L":  {
+                          "item":  "minecraft:leather"
+                      },
+                "C":  {
+                          "item":  "minecraft:ender_chest"
+                      }
+            },
+    "pattern":  [
+                    " L ",
+                    "LCL",
+                    " L "
+                ],
+    "result":  {
+                   "id":  "slickfun:portable_ender_chest",
+                   "count":  1
+               }
+}

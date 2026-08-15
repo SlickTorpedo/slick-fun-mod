@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:slime_block"
+                      },
+                "B":  {
+                          "item":  "minecraft:leather_boots"
+                      }
+            },
+    "pattern":  [
+                    "S S",
+                    "SBS",
+                    "SSS"
+                ],
+    "result":  {
+                   "id":  "slickfun:slime_boots",
+                   "count":  1
+               }
+}

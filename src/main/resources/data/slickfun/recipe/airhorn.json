@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "R":  {
+                          "item":  "minecraft:red_dye"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "N":  {
+                          "item":  "minecraft:note_block"
+                      }
+            },
+    "pattern":  [
+                    "  R",
+                    " II",
+                    "NI "
+                ],
+    "result":  {
+                   "id":  "slickfun:airhorn",
+                   "count":  1
+               }
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "C":  {
+                          "item":  "minecraft:clock"
+                      },
+                "P":  {
+                          "item":  "minecraft:phantom_membrane"
+                      },
+                "G":  {
+                          "item":  "minecraft:gold_ingot"
+                      }
+            },
+    "pattern":  [
+                    " P ",
+                    "GCG",
+                    " P "
+                ],
+    "result":  {
+                   "id":  "slickfun:tide_clock",
+                   "count":  1
+               }
+}

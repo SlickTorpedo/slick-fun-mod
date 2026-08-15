@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "R":  {
+                          "item":  "minecraft:redstone"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "E":  {
+                          "item":  "minecraft:ender_pearl"
+                      },
+                "G":  {
+                          "item":  "minecraft:gold_ingot"
+                      }
+            },
+    "pattern":  [
+                    "RRR",
+                    "IEI",
+                    "IGI"
+                ],
+    "result":  {
+                   "id":  "slickfun:poke_ball",
+                   "count":  2
+               }
+}

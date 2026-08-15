@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "P":  {
+                          "item":  "minecraft:paper"
+                      },
+                "S":  {
+                          "item":  "minecraft:stick"
+                      },
+                "E":  {
+                          "item":  "minecraft:spider_eye"
+                      }
+            },
+    "pattern":  [
+                    "SPS",
+                    "PEP",
+                    "SPS"
+                ],
+    "result":  {
+                   "id":  "slickfun:mob_census",
+                   "count":  1
+               }
+}

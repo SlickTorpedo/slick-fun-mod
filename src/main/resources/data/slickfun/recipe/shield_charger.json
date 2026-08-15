@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "C":  {
+                          "item":  "minecraft:heart_of_the_sea"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    " I ",
+                    "ICI",
+                    " R "
+                ],
+    "result":  {
+                   "id":  "slickfun:shield_charger",
+                   "count":  1
+               }
+}

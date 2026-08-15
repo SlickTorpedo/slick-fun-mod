@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "minecraft:bowl"
+                      },
+                "M":  {
+                          "item":  "minecraft:brown_mushroom"
+                      },
+                "R":  {
+                          "item":  "minecraft:red_mushroom"
+                      },
+                "F":  {
+                          "item":  "minecraft:fermented_spider_eye"
+                      }
+            },
+    "pattern":  [
+                    "MFR",
+                    " B ",
+                    "   "
+                ],
+    "result":  {
+                   "id":  "slickfun:mystery_stew",
+                   "count":  1
+               }
+}

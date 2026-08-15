@@ -1,0 +1,25 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "group":  "slickfun_portable",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone"
+                      },
+                "L":  {
+                          "item":  "minecraft:leather"
+                      }
+            },
+    "pattern":  [
+                    " I ",
+                    "IRI",
+                    " L "
+                ],
+    "result":  {
+                   "id":  "slickfun:swiss_army_knife",
+                   "count":  1
+               }
+}

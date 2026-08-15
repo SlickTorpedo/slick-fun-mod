@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:stick"
+                      },
+                "H":  {
+                          "item":  "minecraft:honeycomb"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "pattern":  [
+                    " HI",
+                    " SH",
+                    "S  "
+                ],
+    "result":  {
+                   "id":  "slickfun:beehive_tool",
+                   "count":  1
+               }
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "B":  {
+                          "item":  "minecraft:bucket"
+                      },
+                "S":  {
+                          "item":  "minecraft:slime_ball"
+                      },
+                "W":  {
+                          "item":  "minecraft:white_dye"
+                      }
+            },
+    "pattern":  [
+                    "SWS",
+                    "SBS",
+                    " S "
+                ],
+    "result":  {
+                   "id":  "slickfun:bucket_of_goon",
+                   "count":  1
+               }
+}

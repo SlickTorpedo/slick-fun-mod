@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "G":  {
+                          "item":  "minecraft:gold_ingot"
+                      },
+                "W":  {
+                          "item":  "minecraft:wheat"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone"
+                      }
+            },
+    "pattern":  [
+                    "GWG",
+                    "G G",
+                    " R "
+                ],
+    "result":  {
+                   "id":  "slickfun:breeding_whistle",
+                   "count":  1
+               }
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "W":  {
+                          "item":  "minecraft:white_wool"
+                      },
+                "S":  {
+                          "item":  "minecraft:string"
+                      },
+                "L":  {
+                          "item":  "minecraft:leather"
+                      }
+            },
+    "pattern":  [
+                    "WWW",
+                    "SSS",
+                    " L "
+                ],
+    "result":  {
+                   "id":  "slickfun:emergency_parachute",
+                   "count":  1
+               }
+}

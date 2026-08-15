@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "G":  {
+                          "item":  "minecraft:gold_nugget"
+                      },
+                "Q":  {
+                          "item":  "minecraft:quartz"
+                      }
+            },
+    "pattern":  [
+                    " G ",
+                    "GQG",
+                    " G "
+                ],
+    "result":  {
+                   "id":  "slickfun:lucky_coin",
+                   "count":  1
+               }
+}

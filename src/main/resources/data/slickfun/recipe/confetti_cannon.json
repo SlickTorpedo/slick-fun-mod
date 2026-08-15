@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "P":  {
+                          "item":  "minecraft:paper"
+                      },
+                "G":  {
+                          "item":  "minecraft:gunpowder"
+                      },
+                "D":  {
+                          "item":  "minecraft:light_blue_dye"
+                      }
+            },
+    "pattern":  [
+                    "PDP",
+                    "PGP",
+                    "PPP"
+                ],
+    "result":  {
+                   "id":  "slickfun:confetti_cannon",
+                   "count":  1
+               }
+}

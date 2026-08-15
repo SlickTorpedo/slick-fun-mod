@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "S":  {
+                          "item":  "minecraft:string"
+                      },
+                "T":  {
+                          "item":  "minecraft:tripwire_hook"
+                      }
+            },
+    "pattern":  [
+                    " TI",
+                    " SI",
+                    "S  "
+                ],
+    "result":  {
+                   "id":  "slickfun:grappling_hook",
+                   "count":  1
+               }
+}

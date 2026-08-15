@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone"
+                      },
+                "S":  {
+                          "item":  "minecraft:stick"
+                      }
+            },
+    "pattern":  [
+                    "II ",
+                    "RS ",
+                    "   "
+                ],
+    "result":  {
+                   "id":  "slickfun:smg",
+                   "count":  1
+               }
+}

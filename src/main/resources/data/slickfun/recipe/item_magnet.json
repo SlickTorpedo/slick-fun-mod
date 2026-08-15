@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "group":  "slickfun_portable",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    "I I",
+                    "I I",
+                    "IRI"
+                ],
+    "result":  {
+                   "id":  "slickfun:item_magnet",
+                   "count":  1
+               }
+}

@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "G":  {
+                          "item":  "minecraft:gold_ingot"
+                      },
+                "L":  {
+                          "item":  "minecraft:glass_pane"
+                      },
+                "E":  {
+                          "item":  "minecraft:ender_eye"
+                      },
+                "C":  {
+                          "item":  "minecraft:chest"
+                      }
+            },
+    "pattern":  [
+                    "GLG",
+                    "LEL",
+                    " C "
+                ],
+    "result":  {
+                   "id":  "slickfun:item_finder",
+                   "count":  1
+               }
+}

@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "G":  {
+                          "item":  "minecraft:black_stained_glass_pane"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_nugget"
+                      }
+            },
+    "pattern":  [
+                    "IGI",
+                    "GGG"
+                ],
+    "result":  {
+                   "id":  "slickfun:dark_shades",
+                   "count":  1
+               }
+}

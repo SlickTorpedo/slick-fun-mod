@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "building",
+    "key":  {
+                "B":  {
+                          "item":  "minecraft:brick"
+                      },
+                "F":  {
+                          "item":  "minecraft:furnace"
+                      }
+            },
+    "pattern":  [
+                    "BBB",
+                    "BFB",
+                    "BBB"
+                ],
+    "result":  {
+                   "id":  "slickfun:kiln",
+                   "count":  1
+               }
+}

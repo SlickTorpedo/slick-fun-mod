@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:string"
+                      },
+                "P":  {
+                          "item":  "minecraft:ender_pearl"
+                      }
+            },
+    "pattern":  [
+                    "S S",
+                    "SPS",
+                    "S S"
+                ],
+    "result":  {
+                   "id":  "slickfun:ender_tether",
+                   "count":  2
+               }
+}

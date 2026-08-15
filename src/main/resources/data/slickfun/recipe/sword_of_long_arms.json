@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "N":  {
+                          "item":  "minecraft:netherite_ingot"
+                      },
+                "D":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "S":  {
+                          "item":  "minecraft:stick"
+                      },
+                "E":  {
+                          "item":  "minecraft:ender_eye"
+                      }
+            },
+    "pattern":  [
+                    " D ",
+                    " N ",
+                    "ESE"
+                ],
+    "result":  {
+                   "id":  "slickfun:sword_of_long_arms",
+                   "count":  1
+               }
+}

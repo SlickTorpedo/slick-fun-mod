@@ -1,0 +1,10 @@
+{
+    "variants":  {
+                     "powered=false":  {
+                                           "model":  "slickfun:block/vacuum_chest"
+                                       },
+                     "powered=true":  {
+                                          "model":  "slickfun:block/vacuum_chest"
+                                      }
+                 }
+}

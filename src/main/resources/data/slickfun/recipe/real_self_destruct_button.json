@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "T":  {
+                          "item":  "minecraft:tnt"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "pattern":  [
+                    "III",
+                    "ITI",
+                    "IRI"
+                ],
+    "result":  {
+                   "id":  "slickfun:real_self_destruct_button",
+                   "count":  1
+               }
+}

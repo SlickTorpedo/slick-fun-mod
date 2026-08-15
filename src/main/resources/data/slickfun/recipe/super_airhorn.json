@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "group":  "slickfun_airhorn",
+    "key":  {
+                "A":  {
+                          "item":  "slickfun:airhorn"
+                      },
+                "D":  {
+                          "item":  "minecraft:diamond"
+                      }
+            },
+    "pattern":  [
+                    "AAA",
+                    "ADA",
+                    "AAA"
+                ],
+    "result":  {
+                   "id":  "slickfun:super_airhorn",
+                   "count":  1
+               }
+}

@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:stick"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "pattern":  [
+                    " II",
+                    "I  ",
+                    " S "
+                ],
+    "result":  {
+                   "id":  "slickfun:harvest_sickle",
+                   "count":  1
+               }
+}

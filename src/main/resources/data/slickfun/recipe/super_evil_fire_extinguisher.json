@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "E":  {
+                          "item":  "slickfun:evil_fire_extinguisher"
+                      },
+                "L":  {
+                          "item":  "minecraft:lava_bucket"
+                      },
+                "M":  {
+                          "item":  "minecraft:magma_block"
+                      },
+                "N":  {
+                          "item":  "minecraft:netherite_ingot"
+                      }
+            },
+    "pattern":  [
+                    "MLM",
+                    "MEM",
+                    "MNM"
+                ],
+    "result":  {
+                   "id":  "slickfun:super_evil_fire_extinguisher",
+                   "count":  1
+               }
+}

@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "B":  {
+                          "item":  "minecraft:oak_boat"
+                      },
+                "L":  {
+                          "item":  "minecraft:leather"
+                      }
+            },
+    "pattern":  [
+                    "L L",
+                    "LBL",
+                    " L "
+                ],
+    "result":  {
+                   "id":  "slickfun:pocket_boat",
+                   "count":  1
+               }
+}

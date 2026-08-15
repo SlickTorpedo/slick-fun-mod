@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "B":  {
+                          "item":  "minecraft:bone"
+                      },
+                "G":  {
+                          "item":  "minecraft:gold_ingot"
+                      },
+                "D":  {
+                          "item":  "minecraft:diamond"
+                      }
+            },
+    "pattern":  [
+                    " B ",
+                    "GDG",
+                    " B "
+                ],
+    "result":  {
+                   "id":  "slickfun:head_hunters_charm",
+                   "count":  1
+               }
+}

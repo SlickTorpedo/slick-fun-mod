@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "G":  {
+                          "item":  "minecraft:glass_pane"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone"
+                      },
+                "S":  {
+                          "item":  "minecraft:stick"
+                      },
+                "C":  {
+                          "item":  "minecraft:copper_ingot"
+                      }
+            },
+    "pattern":  [
+                    "GII",
+                    "CRI",
+                    "S  "
+                ],
+    "result":  {
+                   "id":  "slickfun:sniper",
+                   "count":  1
+               }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "slickfun:block/kiln_front_on",
+    "side": "slickfun:block/kiln_side",
+    "top": "slickfun:block/kiln_top"
+  }
+}
