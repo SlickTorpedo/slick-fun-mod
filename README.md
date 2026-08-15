@@ -1,4 +1,6 @@
-# Slick Fun Mod
+# slick-fun-mod
+
+My minecraft 1.21.1 mod for me and my friends server.
 
 A Fabric 1.21.1 mod of portable utilities, joke items, an armoury and a handful of things that
 only pretend to destroy the world. Works client side, server side, or both.
