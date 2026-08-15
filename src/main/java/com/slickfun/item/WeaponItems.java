@@ -7,6 +7,7 @@ import com.slickfun.registry.ModDamageTypes;
 import com.slickfun.util.ServerScheduler;
 
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -30,14 +31,15 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.joml.Vector3f;
 
-/** Weapons that only ever work on other players. Animals are safe from all of these. */
+/** Weapons with strict rules about what they will hit. Farm animals are safe from all of these. */
 public final class WeaponItems {
 	private WeaponItems() {
 	}
 
-	/** Finds the first player on a ray, optionally straight through walls. */
-	private static ServerPlayerEntity trace(ServerWorld level, ServerPlayerEntity shooter, Vec3d from, Vec3d aim,
-			double range, double step, double hitRadius, boolean throughWalls, java.util.function.Consumer<Vec3d> trail) {
+	/** Finds the first acceptable target on a ray, optionally straight through walls. */
+	private static LivingEntity trace(ServerWorld level, ServerPlayerEntity shooter, Vec3d from, Vec3d aim,
+			double range, double step, double hitRadius, boolean throughWalls,
+			java.util.function.Predicate<LivingEntity> valid, java.util.function.Consumer<Vec3d> trail) {
 		for (double travelled = 0.0D; travelled < range; travelled += step) {
 			Vec3d point = from.add(aim.multiply(travelled));
 
@@ -55,13 +57,28 @@ public final class WeaponItems {
 
 			Box around = new Box(point, point).expand(hitRadius);
 
-			for (ServerPlayerEntity candidate : level.getEntitiesByClass(ServerPlayerEntity.class, around,
-					other -> other != shooter && other.isAlive() && !other.isSpectator() && !other.isCreative())) {
+			for (LivingEntity candidate : level.getEntitiesByClass(LivingEntity.class, around,
+					other -> other != shooter && other.isAlive() && !other.isSpectator() && valid.test(other))) {
 				return candidate;
 			}
 		}
 
 		return null;
+	}
+
+	/** The Rail Gun's rule: other players, and nothing else. */
+	private static boolean isTargetPlayer(LivingEntity entity) {
+		return entity instanceof ServerPlayerEntity player && !player.isCreative();
+	}
+
+	/**
+	 * The sword's rule: other players and anything hostile.
+	 *
+	 * <p>Passive animals are still refused. Ten blocks of reach swinging at everything alive
+	 * would mean walking through your own farm and killing all of it by accident.
+	 */
+	public static boolean isSwordTarget(LivingEntity entity) {
+		return isTargetPlayer(entity) || entity instanceof HostileEntity;
 	}
 
 	/**
@@ -106,7 +123,8 @@ public final class WeaponItems {
 			level.playSound(null, shooter.getX(), shooter.getY(), shooter.getZ(),
 					SoundEvents.BLOCK_BEACON_DEACTIVATE, SoundCategory.PLAYERS, 1.4F, 2.0F);
 
-			ServerPlayerEntity hit = trace(level, shooter, muzzle, aim, RANGE, 0.2D, 0.6D, false,
+			LivingEntity hit = trace(level, shooter, muzzle, aim, RANGE, 0.2D, 0.6D, false,
+					WeaponItems::isTargetPlayer,
 					point -> level.spawnParticles(beam, point.x, point.y, point.z, 1, 0.0D, 0.0D, 0.0D, 0.0D));
 
 			if (hit == null) {
@@ -128,10 +146,10 @@ public final class WeaponItems {
 	}
 
 	/**
-	 * Ten blocks of reach, and players only.
+	 * Ten blocks of reach, against players and hostile mobs.
 	 *
 	 * <p>The reach itself is a real attribute modifier so vanilla's own attack handling accepts
-	 * the swing; the players-only rule is enforced in {@code WeaponManager}, which cancels the
+	 * the swing; the target rule is enforced in {@code WeaponManager}, which cancels the
 	 * hit on anything else. Fed enough ender pearls, a right click strikes through walls -
 	 * something the ordinary swing can never do, because the client will not send an attack it
 	 * cannot see a path to.
@@ -195,8 +213,8 @@ public final class WeaponItems {
 			}
 
 			boolean throughWalls = seesThroughWalls(stack);
-			ServerPlayerEntity target = trace(level, player, player.getEyePos(), player.getRotationVec(1.0F),
-					REACH, 0.25D, 0.7D, throughWalls, null);
+			LivingEntity target = trace(level, player, player.getEyePos(), player.getRotationVec(1.0F),
+					REACH, 0.25D, 0.7D, throughWalls, WeaponItems::isSwordTarget, null);
 
 			if (target == null) {
 				return false;

@@ -563,7 +563,7 @@
 
 	"tooltip.slickfun.rail_gun": "One shot. One player. One minute.",
 	"tooltip.slickfun.rail_gun.2": "Armour will not help them",
-	"tooltip.slickfun.long_arms": "Reaches %s blocks. Players only.",
+	"tooltip.slickfun.long_arms": "Reaches %s blocks. Players and hostile mobs.",
 	"tooltip.slickfun.long_arms.2": "Right click to strike at range",
 	"tooltip.slickfun.long_arms.walls": "Sees through walls",
 	"tooltip.slickfun.long_arms.pearls": "Ender pearls: %s / %s to reach through walls",
@@ -574,7 +574,7 @@
 	"death.attack.railgun": "%1$s was perforated",
 	"death.attack.railgun.player": "%1$s was perforated by %2$s",
 
-	"message.slickfun.longarms.players_only": "It refuses to swing at anything but a player",
+	"message.slickfun.longarms.players_only": "It will only swing at players and hostile mobs",
 	"message.slickfun.longarms.fed": "Ender pearls: %s / %s",
 	"message.slickfun.longarms.charged": "It reaches through walls now (%s / %s)",
 	"message.slickfun.longarms.already": "It is already soaked through",
