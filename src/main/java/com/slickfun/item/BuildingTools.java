@@ -44,8 +44,57 @@ public final class BuildingTools {
 	 * only where there is already empty space, so it cannot damage anything you have built.
 	 */
 	public static class BuilderWand extends Item {
+		/** Ender pearls to reach the full reach. One extra block each. */
+		public static final int MAX_PEARLS = 128;
+
 		public BuilderWand(Settings settings) {
 			super(settings);
+		}
+
+		public static int pearlsIn(ItemStack stack) {
+			return stack.getOrDefault(com.slickfun.registry.ModComponents.PEARL_CHARGE, 0);
+		}
+
+		/** Eight bare, one more per pearl soaked into it. */
+		public static int reachOf(ItemStack stack) {
+			return MAX_BLOCKS + pearlsIn(stack);
+		}
+
+		/** Crouch and click the air to feed it pearls. */
+		@Override
+		public net.minecraft.util.TypedActionResult<ItemStack> use(World world, PlayerEntity user, net.minecraft.util.Hand hand) {
+			ItemStack stack = user.getStackInHand(hand);
+
+			if (world.isClient) {
+				return net.minecraft.util.TypedActionResult.success(stack, true);
+			}
+
+			if (!(user instanceof ServerPlayerEntity player) || !player.isSneaking()) {
+				return net.minecraft.util.TypedActionResult.pass(stack);
+			}
+
+			int wanted = MAX_PEARLS - pearlsIn(stack);
+
+			if (wanted <= 0) {
+				player.sendMessage(Text.translatable("message.slickfun.wand.pearls_full").formatted(Formatting.GRAY), true);
+				return net.minecraft.util.TypedActionResult.fail(stack);
+			}
+
+			int taken = com.slickfun.util.BlockSupply.consume(player, net.minecraft.item.Items.ENDER_PEARL, wanted);
+
+			if (taken == 0) {
+				player.sendMessage(Text.translatable("message.slickfun.wand.pearls_need", wanted)
+						.formatted(Formatting.GRAY), false);
+				return net.minecraft.util.TypedActionResult.fail(stack);
+			}
+
+			stack.set(com.slickfun.registry.ModComponents.PEARL_CHARGE, pearlsIn(stack) + taken);
+			player.getServerWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
+					net.minecraft.sound.SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.PLAYERS, 0.8F, 1.4F);
+			player.sendMessage(Text.translatable("message.slickfun.wand.pearls_fed",
+					pearlsIn(stack), MAX_PEARLS, reachOf(stack)).formatted(Formatting.LIGHT_PURPLE), false);
+
+			return net.minecraft.util.TypedActionResult.success(stack);
 		}
 
 		@Override
@@ -68,8 +117,10 @@ public final class BuildingTools {
 				return ActionResult.FAIL;
 			}
 
+			int reach = reachOf(context.getStack());
 			Item needed = template.getBlock().asItem();
-			int available = player.isCreative() ? MAX_BLOCKS : countIn(player, needed);
+			// Bulk containers count as supply, so a storage full of stone is buildable from.
+			int available = player.isCreative() ? reach : com.slickfun.util.BlockSupply.available(player, needed);
 
 			if (available <= 0) {
 				player.sendMessage(Text.translatable("message.slickfun.wand.no_blocks", template.getBlock().getName())
@@ -77,7 +128,7 @@ public final class BuildingTools {
 				return ActionResult.FAIL;
 			}
 
-			List<BlockPos> targets = plan(world, clicked, template, face, Math.min(available, MAX_BLOCKS));
+			List<BlockPos> targets = plan(world, clicked, template, face, Math.min(available, reach));
 
 			if (targets.isEmpty()) {
 				player.sendMessage(Text.translatable("message.slickfun.wand.no_room").formatted(Formatting.GRAY), true);
@@ -89,13 +140,15 @@ public final class BuildingTools {
 			}
 
 			if (!player.isCreative()) {
-				consume(player, needed, targets.size());
+				com.slickfun.util.BlockSupply.consume(player, needed, targets.size());
 			}
+
+			com.slickfun.util.BuildUndo.record(player, targets, template, needed);
 
 			serverWorld.playSound(null, clicked, template.getSoundGroup().getPlaceSound(),
 					SoundCategory.BLOCKS, 1.0F, 1.0F);
-			player.sendMessage(Text.translatable("message.slickfun.wand.placed", targets.size())
-					.formatted(Formatting.GRAY), true);
+			player.sendMessage(com.slickfun.util.BuildUndo.prompt(targets.size(),
+					com.slickfun.util.BuildUndo.depth(player)), false);
 
 			return ActionResult.SUCCESS;
 		}
@@ -141,8 +194,11 @@ public final class BuildingTools {
 
 		@Override
 		public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
-			tooltip.add(Text.translatable("tooltip.slickfun.builder_wand.1", MAX_BLOCKS).formatted(Formatting.GRAY));
+			tooltip.add(Text.translatable("tooltip.slickfun.builder_wand.1", reachOf(stack)).formatted(Formatting.GRAY));
 			tooltip.add(Text.translatable("tooltip.slickfun.builder_wand.2").formatted(Formatting.DARK_GRAY));
+			tooltip.add(Text.translatable("tooltip.slickfun.builder_wand.pearls", pearlsIn(stack), MAX_PEARLS)
+					.formatted(pearlsIn(stack) >= MAX_PEARLS ? Formatting.LIGHT_PURPLE : Formatting.DARK_GRAY));
+			tooltip.add(Text.translatable("tooltip.slickfun.builder_wand.storage").formatted(Formatting.DARK_GRAY));
 		}
 	}
 

@@ -75,6 +75,45 @@ public final class UpdateChecker {
 		}
 	}
 
+	/**
+	 * Checks immediately rather than waiting for the next poll, reporting what it found.
+	 *
+	 * <p>Runs off-thread like the scheduled check, so the reply comes back through a callback
+	 * instead of being returned - the command that asked has long since finished.
+	 */
+	public static void checkNow(java.util.function.Consumer<net.minecraft.text.Text> reply) {
+		Runnable job = () -> {
+			String running = currentVersion();
+
+			try {
+				// Cleared so a version already sitting staged is reported again rather than
+				// silently skipped, which would look like the command did nothing.
+				downloaded = null;
+				check();
+
+				String latest = fetchManifest().get("version").getAsString();
+
+				reply.accept(Versions.isNewer(latest, running)
+						? net.minecraft.text.Text.translatable("message.slickfun.update.ready", latest)
+								.formatted(net.minecraft.util.Formatting.AQUA)
+						: net.minecraft.text.Text.translatable("message.slickfun.update.current", running)
+								.formatted(net.minecraft.util.Formatting.GREEN));
+			} catch (Exception e) {
+				reply.accept(net.minecraft.text.Text.translatable("message.slickfun.update.failed", e.toString())
+						.formatted(net.minecraft.util.Formatting.RED));
+			}
+		};
+
+		if (scheduler != null) {
+			scheduler.execute(job);
+		} else {
+			// Auto-update is switched off, but an explicit request should still work.
+			Thread thread = new Thread(job, "slickfun-update-manual");
+			thread.setDaemon(true);
+			thread.start();
+		}
+	}
+
 	private static void check() throws IOException, InterruptedException {
 		String running = currentVersion();
 		JsonObject manifest = fetchManifest();

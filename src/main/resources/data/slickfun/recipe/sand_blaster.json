@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "S":  {
+                          "item":  "minecraft:sand"
+                      },
+                "P":  {
+                          "item":  "minecraft:piston"
+                      },
+                "T":  {
+                          "item":  "minecraft:stick"
+                      }
+            },
+    "pattern":  [
+                    "IIS",
+                    "PT ",
+                    "T  "
+                ],
+    "result":  {
+                   "id":  "slickfun:sand_blaster",
+                   "count":  1
+               }
+}

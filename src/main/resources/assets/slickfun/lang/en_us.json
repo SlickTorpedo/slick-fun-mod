@@ -148,7 +148,7 @@
 	"tooltip.slickfun.mob_repellent.1": "Shoves hostile mobs back within %s blocks.",
 	"tooltip.slickfun.mob_repellent.on": "Switched on",
 	"tooltip.slickfun.mob_repellent.off": "Switched off - right click to toggle",
-	"tooltip.slickfun.builder_wand.1": "Extends the surface you click by up to %s blocks.",
+	"tooltip.slickfun.builder_wand.1": "Extends a surface, up to %s blocks a click",
 	"tooltip.slickfun.builder_wand.2": "Uses matching blocks from your inventory",
 	"tooltip.slickfun.exchange_wand.1": "Swaps up to %s connected blocks in one click.",
 	"tooltip.slickfun.exchange_wand.2": "Hold the replacement in your off hand",
@@ -654,5 +654,27 @@
 	"message.slickfun.bulk.auto_button_on": "Auto-collect: ON (click to pause)",
 	"message.slickfun.bulk.auto_button_off": "Auto-collect: OFF (click to resume)",
 
-	"message.slickfun.update.ready": "Slick Fun Mod %s downloaded - restart to apply"
+	"message.slickfun.update.ready": "Slick Fun Mod %s downloaded - restart to apply",
+
+	"item.slickfun.sand_blaster": "Sand Blaster",
+
+	"tooltip.slickfun.sand_blaster": "Clears up to %s connected sand or gravel at once",
+	"tooltip.slickfun.sand_blaster.2": "All of it drops",
+	"tooltip.slickfun.builder_wand.pearls": "Ender pearls: %s / %s (crouch click to feed)",
+	"tooltip.slickfun.builder_wand.storage": "Builds from an Insanely Large Storage too",
+
+	"message.slickfun.sandblaster.wrong_block": "Point it at sand or gravel",
+	"message.slickfun.sandblaster.cleared": "Blasted %s blocks",
+
+	"message.slickfun.wand.undo_button": "[Undo]",
+	"message.slickfun.wand.undo_hover": "Take that back (%s clicks stored)",
+	"message.slickfun.wand.undone": "Took back %s blocks (%s left to undo)",
+	"message.slickfun.wand.nothing_to_undo": "Nothing left to undo",
+	"message.slickfun.wand.pearls_fed": "Ender pearls: %s / %s - reach is now %s blocks",
+	"message.slickfun.wand.pearls_full": "It cannot hold any more pearls",
+	"message.slickfun.wand.pearls_need": "Carry up to %s ender pearls and crouch click",
+
+	"message.slickfun.update.checking": "Checking for a new build...",
+	"message.slickfun.update.current": "Already on the newest build (%s)",
+	"message.slickfun.update.failed": "Update check failed: %s"
 }

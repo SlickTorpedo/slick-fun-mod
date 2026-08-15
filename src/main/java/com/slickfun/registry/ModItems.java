@@ -38,6 +38,7 @@ import com.slickfun.item.PocketBedrollItem;
 import com.slickfun.item.AdminMagnetItem;
 import com.slickfun.item.MagneticRewindItem;
 import com.slickfun.item.PrankItems;
+import com.slickfun.item.SandBlasterItem;
 import com.slickfun.item.ScubaTankItem;
 import com.slickfun.item.SoulTieItem;
 import com.slickfun.item.PokeBallItem;
@@ -206,6 +207,9 @@ public final class ModItems {
 
 	public static final Item PAINT_ROLLER = register("paint_roller",
 			new BuildingTools.PaintRoller(new Item.Settings().maxCount(1)));
+
+	public static final Item SAND_BLASTER = register("sand_blaster",
+			new SandBlasterItem(new Item.Settings().maxCount(1).maxDamage(512)));
 
 	public static final Item HARVEST_SICKLE = register("harvest_sickle",
 			new FarmTools.HarvestSickle(new Item.Settings().maxCount(1).maxDamage(512)));

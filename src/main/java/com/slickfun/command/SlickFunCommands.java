@@ -40,9 +40,50 @@ public final class SlickFunCommands {
 						.executes(SlickFunCommands::openMenu))
 				.then(CommandManager.literal("recipes")
 						.executes(SlickFunCommands::grantRecipes))
+				.then(CommandManager.literal("undo")
+						.executes(SlickFunCommands::undo))
+				.then(CommandManager.literal("update")
+						.requires(source -> source.hasPermissionLevel(AdminUtil.REQUIRED_LEVEL))
+						.executes(SlickFunCommands::update))
 				.then(CommandManager.literal("help")
 						.executes(SlickFunCommands::help))
 				.executes(SlickFunCommands::help));
+	}
+
+	/** Takes back the last Builder Wand click. Driven by the click-to-undo line in chat. */
+	private static int undo(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
+		ServerPlayerEntity player = context.getSource().getPlayerOrThrow();
+		int removed = com.slickfun.util.BuildUndo.undo(player);
+
+		if (removed < 0) {
+			// The undo button stays in old chat lines forever, so hitting a spent one needs to
+			// sound like nothing happened rather than looking like the click was missed.
+			player.getServerWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
+					net.minecraft.sound.SoundEvents.BLOCK_DISPENSER_FAIL,
+					net.minecraft.sound.SoundCategory.PLAYERS, 0.8F, 1.0F);
+			player.sendMessage(Text.translatable("message.slickfun.wand.nothing_to_undo").formatted(Formatting.GRAY), true);
+			return 0;
+		}
+
+		player.sendMessage(Text.translatable("message.slickfun.wand.undone",
+				removed, com.slickfun.util.BuildUndo.depth(player)).formatted(Formatting.AQUA), true);
+		return removed;
+	}
+
+	/** Checks the repository right now instead of waiting for the next poll. */
+	private static int update(CommandContext<ServerCommandSource> context) {
+		ServerCommandSource source = context.getSource();
+
+		source.sendFeedback(() -> Text.translatable("message.slickfun.update.checking").formatted(Formatting.GRAY), false);
+
+		// Logged as well as sent back: a console or RCON caller has usually gone by the time
+		// the network round trip finishes, and its reply would go nowhere.
+		com.slickfun.update.UpdateChecker.checkNow(result -> source.getServer().execute(() -> {
+			com.slickfun.SlickFunMod.LOGGER.info("Update check: {}", result.getString());
+			source.sendFeedback(() -> result, false);
+		}));
+
+		return 1;
 	}
 
 	private static int openMenu(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
