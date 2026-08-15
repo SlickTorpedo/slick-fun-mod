@@ -141,7 +141,7 @@ public final class UpdateChecker {
 		download(REPO + file, staged);
 		downloaded = latest;
 
-		SlickFunMod.LOGGER.info("Downloaded Slick Fun Mod {} - it will be applied on the next start.", latest);
+		SlickFunMod.LOGGER.info("Downloaded Slick Fun Mod {} - it will be installed when you close the game.", latest);
 		UpdateNotifier.announce(latest);
 	}
 

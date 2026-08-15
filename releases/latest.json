@@ -1,6 +1,6 @@
 {
-  "version": "1.17.0",
-  "file": "slick-fun-mod-1.17.0.jar",
+  "version": "1.18.0",
+  "file": "slick-fun-mod-1.18.0.jar",
   "minecraft": "1.21.1",
-  "notes": "Builder Wand pearls, undo and storage support; Sand Blaster; /slickfun update."
+  "notes": "Updates now actually install. The swap happens after the game closes, because a running JVM locks its own jar."
 }

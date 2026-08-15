@@ -654,7 +654,7 @@
 	"message.slickfun.bulk.auto_button_on": "Auto-collect: ON (click to pause)",
 	"message.slickfun.bulk.auto_button_off": "Auto-collect: OFF (click to resume)",
 
-	"message.slickfun.update.ready": "Slick Fun Mod %s downloaded - restart to apply",
+	"message.slickfun.update.ready": "Slick Fun Mod %s downloaded - it installs when you close the game",
 
 	"item.slickfun.sand_blaster": "Sand Blaster",
 

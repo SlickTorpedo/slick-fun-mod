@@ -14,6 +14,7 @@ import com.slickfun.registry.ModVillagers;
 import com.slickfun.screen.PortableCookerScreenHandler;
 import com.slickfun.update.UpdateChecker;
 import com.slickfun.update.UpdateNotifier;
+import com.slickfun.update.UpdateSwapper;
 import com.slickfun.util.AutoStorageManager;
 import com.slickfun.util.BlockOwnership;
 import com.slickfun.util.BoatManager;
@@ -85,6 +86,7 @@ public class SlickFunMod implements ModInitializer {
 		SlickFunCommands.register();
 		UpdateNotifier.register();
 		UpdateChecker.register();
+		UpdateSwapper.register();
 
 		LOGGER.info("Slick Fun Mod loaded. Stay hydrated, die responsibly.");
 	}
